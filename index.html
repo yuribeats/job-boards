@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOB SEARCH</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      background: #fff;
+      color: #000;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    a { color: #000; text-decoration: none; }
+    a:hover { color: #228B22; }
+
+    .header {
+      border-bottom: 2px solid #000;
+      padding-bottom: 16px;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 28px;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .header p {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #666;
+    }
+
+    .category {
+      margin-bottom: 36px;
+    }
+    .category-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #228B22;
+      border-bottom: 1px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      gap: 12px;
+    }
+    .entry-left {
+      flex: 1;
+      min-width: 0;
+    }
+    .entry-name {
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    .entry-name a {
+      border-bottom: 1px solid transparent;
+    }
+    .entry-name a:hover {
+      border-bottom: 1px solid #228B22;
+    }
+    .entry-note {
+      font-size: 11px;
+      color: #666;
+      margin-top: 2px;
+      letter-spacing: 0.5px;
+    }
+    .entry-url {
+      font-size: 10px;
+      color: #999;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .tips {
+      margin-top: 48px;
+      border-top: 2px solid #000;
+      padding-top: 16px;
+    }
+    .tips-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .tips p {
+      font-size: 11px;
+      color: #666;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
+    }
+    .tips .search-terms {
+      color: #000;
+      font-size: 12px;
+      margin-top: 8px;
+      line-height: 2;
+    }
+    .tips .search-terms span {
+      display: inline-block;
+      border: 1px solid #000;
+      padding: 2px 8px;
+      margin: 2px 4px 2px 0;
+      font-size: 11px;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 24px 16px; }
+      .header h1 { font-size: 22px; }
+      .entry { flex-direction: column; gap: 2px; }
+      .entry-url { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>JOB SEARCH</h1>
+  <p>YURI RYBAK &middot; PHILADELPHIA, PA &middot; UPDATED MARCH 2026</p>
+</div>
+
+<div class="category">
+  <div class="category-title">GENERAL JOB BOARDS</div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://indeed.com" target="_blank" rel="noopener">INDEED</a></div>
+      <div class="entry-note">FILTER BY $100K+ SALARY; GOOD FOR VOLUME</div>
+    </div>
+    <div class="entry-url">INDEED.COM</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://wellfound.com" target="_blank" rel="noopener">WELLFOUND (ANGELLIST)</a></div>
+      <div class="entry-note">STARTUPS SERIES B/C WITH CREATIVE INDUSTRY BACKGROUNDS</div>
+    </div>
+    <div class="entry-url">WELLFOUND.COM</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://builtinphiladelphia.com" target="_blank" rel="noopener">BUILT IN PHILADELPHIA</a></div>
+      <div class="entry-note">USE FOR SALARY RESEARCH AND CULTURE REVIEWS BEFORE APPLYING</div>
+    </div>
+    <div class="entry-url">BUILTINPHILADELPHIA.COM</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://idealist.org" target="_blank" rel="noopener">IDEALIST</a></div>
+      <div class="entry-note">MISSION-DRIVEN ORGS, NONPROFITS, ARTS — FILTER BY PHILADELPHIA</div>
+    </div>
+    <div class="entry-url">IDEALIST.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://mediabistro.com" target="_blank" rel="noopener">MEDIABISTRO</a></div>
+      <div class="entry-note">MEDIA AND ENTERTAINMENT INDUSTRY ROLES</div>
+    </div>
+    <div class="entry-url">MEDIABISTRO.COM</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://workinentertainment.com" target="_blank" rel="noopener">WORK IN ENTERTAINMENT</a></div>
+      <div class="entry-note">MUSIC, MEDIA, ENTERTAINMENT JOBS</div>
+    </div>
+    <div class="entry-url">WORKINENTERTAINMENT.COM</div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-title">MAJOR PHILADELPHIA EMPLOYERS</div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://jobs.comcast.com" target="_blank" rel="noopener">COMCAST / NBCUNIVERSAL</a></div>
+      <div class="entry-note">HQ IN PHILLY; BUSINESS DEVELOPMENT, PROJECT MANAGEMENT, OPERATIONS</div>
+    </div>
+    <div class="entry-url">JOBS.COMCAST.COM</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://vanguardjobs.com" target="_blank" rel="noopener">VANGUARD</a></div>
+      <div class="entry-note">MALVERN, PA — HYBRID ROLES; STRONG BENEFITS AND 401K</div>
+    </div>
+    <div class="entry-url">VANGUARDJOBS.COM</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://careers.pennmedicine.org" target="_blank" rel="noopener">PENN MEDICINE</a></div>
+      <div class="entry-note">MASSIVE ANCHOR EMPLOYER; OPS AND ADMIN ROLES ACROSS 6 HOSPITALS</div>
+    </div>
+    <div class="entry-url">CAREERS.PENNMEDICINE.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://careers.seic.com" target="_blank" rel="noopener">SEI INVESTMENTS</a></div>
+      <div class="entry-note">OAKS, PA — FINANCE/TECH FIRM, OPERATIONS AND CLIENT SERVICES ROLES</div>
+    </div>
+    <div class="entry-url">CAREERS.SEIC.COM</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://careers.aramark.com" target="_blank" rel="noopener">ARAMARK</a></div>
+      <div class="entry-note">HQ IN PHILLY; CORPORATE OPS, PROJECT MANAGEMENT, AND PARTNERSHIPS</div>
+    </div>
+    <div class="entry-url">CAREERS.ARAMARK.COM</div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-title">TRANSIT</div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://careers.amtrak.com" target="_blank" rel="noopener">AMTRAK</a></div>
+      <div class="entry-note">FEDERAL RAILROAD; CORPORATE AND MANAGEMENT — STRONG BENEFITS, PENSION</div>
+    </div>
+    <div class="entry-url">CAREERS.AMTRAK.COM</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://jobs.septa.org" target="_blank" rel="noopener">SEPTA</a></div>
+      <div class="entry-note">MANAGER/SUPERVISOR/ADMINISTRATOR CATEGORY FOR NON-TRADES ROLES</div>
+    </div>
+    <div class="entry-url">JOBS.SEPTA.ORG</div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-title">UNIVERSITIES & COLLEGES</div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://hr.upenn.edu/PennHR/careers-at-penn" target="_blank" rel="noopener">UNIVERSITY OF PENNSYLVANIA</a></div>
+      <div class="entry-note">LARGEST PRIVATE EMPLOYER IN PHILLY; OPS, MARKETING, FINANCE, REAL ESTATE</div>
+    </div>
+    <div class="entry-url">HR.UPENN.EDU</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://temple.edu/careers" target="_blank" rel="noopener">TEMPLE UNIVERSITY</a></div>
+      <div class="entry-note">LARGE PUBLIC UNIVERSITY; COMMUNITY OUTREACH, OPS, ACADEMIC ADMIN</div>
+    </div>
+    <div class="entry-url">TEMPLE.EDU/CAREERS</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://drexel.edu/hr/careers" target="_blank" rel="noopener">DREXEL UNIVERSITY</a></div>
+      <div class="entry-note">TECH-FORWARD; INNOVATION AND OPS ROLES IN UNIVERSITY CITY CORRIDOR</div>
+    </div>
+    <div class="entry-url">DREXEL.EDU/HR/CAREERS</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://jobs.jefferson.edu" target="_blank" rel="noopener">THOMAS JEFFERSON UNIVERSITY</a></div>
+      <div class="entry-note">HEALTH SCIENCES AND DESIGN UNIVERSITY; ADMIN AND RESEARCH LEADERSHIP</div>
+    </div>
+    <div class="entry-url">JOBS.JEFFERSON.EDU</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://ccp.edu/about-ccp/human-resources" target="_blank" rel="noopener">COMMUNITY COLLEGE OF PHILADELPHIA</a></div>
+      <div class="entry-note">PUBLIC INSTITUTION, WORKFORCE AND ADMIN ROLES</div>
+    </div>
+    <div class="entry-url">CCP.EDU</div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-title">MUSEUMS & CULTURAL INSTITUTIONS</div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://philamuseum.org/about/join-our-team/employment" target="_blank" rel="noopener">PHILADELPHIA MUSEUM OF ART</a></div>
+      <div class="entry-note">STRONG BENEFITS INCL. RETIREMENT MATCH; OPS AND ADMIN ROLES</div>
+    </div>
+    <div class="entry-url">PHILAMUSEUM.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://barnesfoundation.org/about/careers-and-volunteering" target="_blank" rel="noopener">BARNES FOUNDATION</a></div>
+      <div class="entry-note">ART MUSEUM AND EDUCATION CENTER ON THE PARKWAY</div>
+    </div>
+    <div class="entry-url">BARNESFOUNDATION.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://fi.edu/en/join-our-team" target="_blank" rel="noopener">THE FRANKLIN INSTITUTE</a></div>
+      <div class="entry-note">MOST-VISITED MUSEUM IN PA; ADMIN AND PROGRAM ROLES</div>
+    </div>
+    <div class="entry-url">FI.EDU</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://philamuseumcouncil.org/jobs" target="_blank" rel="noopener">MUSEUM COUNCIL OF PHILADELPHIA</a></div>
+      <div class="entry-note">AGGREGATES PHILLY MUSEUM JOBS — UPDATED 1ST AND 15TH OF EVERY MONTH</div>
+    </div>
+    <div class="entry-url">PHILAMUSEUMCOUNCIL.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://philaculture.org/what-we-do/job-bank" target="_blank" rel="noopener">GREATER PHILADELPHIA CULTURAL ALLIANCE JOB BANK</a></div>
+      <div class="entry-note">BROAD CULTURAL SECTOR JOBS ACROSS THE REGION — CHECK REGULARLY</div>
+    </div>
+    <div class="entry-url">PHILACULTURE.ORG</div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-title">NONPROFITS & FOUNDATIONS</div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://philanthropynetwork.org/jobs" target="_blank" rel="noopener">PHILANTHROPY NETWORK GREATER PHILADELPHIA</a></div>
+      <div class="entry-note">PEW CHARITABLE TRUSTS, NEUBAUER FOUNDATION, AND OTHERS POST HERE</div>
+    </div>
+    <div class="entry-url">PHILANTHROPYNETWORK.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://pamuseums.wildapricot.org/Careers" target="_blank" rel="noopener">PA MUSEUMS JOB BOARD</a></div>
+      <div class="entry-note">STATEWIDE MUSEUM SECTOR JOBS</div>
+    </div>
+    <div class="entry-url">PAMUSEUMS.WILDAPRICOT.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://preservationpa.org" target="_blank" rel="noopener">PRESERVATION PENNSYLVANIA</a></div>
+      <div class="entry-note">HISTORIC PRESERVATION NONPROFIT — STATEWIDE; MONITOR FOR OPENINGS</div>
+    </div>
+    <div class="entry-url">PRESERVATIONPA.ORG</div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-title">PARKS, OUTDOORS & HORTICULTURE</div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://phila.gov/jobs" target="_blank" rel="noopener">CITY OF PHILADELPHIA — ALL JOBS</a></div>
+      <div class="entry-note">CENTRAL PORTAL FOR ALL CITY DEPARTMENTS: PPR, PLANNING, HISTORICAL COMMISSION</div>
+    </div>
+    <div class="entry-url">PHILA.GOV/JOBS</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://phila.gov/documents/philadelphia-parks-recreation-job-opportunities" target="_blank" rel="noopener">PHILADELPHIA PARKS & RECREATION (PPR)</a></div>
+      <div class="entry-note">SEASONAL AND PARKS-SPECIFIC ROLES LISTED HERE</div>
+    </div>
+    <div class="entry-url">PHILA.GOV</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://phsonline.org/careers/open-positions" target="_blank" rel="noopener">PENNSYLVANIA HORTICULTURAL SOCIETY (PHS)</a></div>
+      <div class="entry-note">LANDSCAPE, OPS, PARTNERSHIPS & CORPORATE RELATIONS. GREAT BENEFITS.</div>
+    </div>
+    <div class="entry-url">PHSONLINE.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://myphillypark.org/who-we-are/opportunities" target="_blank" rel="noopener">FAIRMOUNT PARK CONSERVANCY</a></div>
+      <div class="entry-note">STEWARDS 10,200 ACRES OF PHILLY PARKS; LANDSCAPE, PRESERVATION, PROGRAMS, EVENTS</div>
+    </div>
+    <div class="entry-url">MYPHILLYPARK.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://treephilly.org/get-involved/work" target="_blank" rel="noopener">TREEPHILLY</a></div>
+      <div class="entry-note">URBAN FORESTRY/GREENING WORK — SEASONAL POSITIONS OPEN JANUARY AND JULY</div>
+    </div>
+    <div class="entry-url">TREEPHILLY.ORG</div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-title">HISTORIC SITES & PRESERVATION</div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://historicphiladelphia.org/careers" target="_blank" rel="noopener">HISTORIC PHILADELPHIA, INC.</a></div>
+      <div class="entry-note">RUNS FRANKLIN SQUARE, OLD CITY PROGRAMMING, VALLEY FORGE INTERPRETATION</div>
+    </div>
+    <div class="entry-url">HISTORICPHILADELPHIA.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://nps.gov/inde/getinvolved/workwithus.htm" target="_blank" rel="noopener">NATIONAL PARK SERVICE — INDEPENDENCE NHP</a></div>
+      <div class="entry-note">FEDERAL JOBS WITH FULL BENEFITS AND PENSION; ALSO SEARCH USAJOBS.GOV</div>
+    </div>
+    <div class="entry-url">NPS.GOV</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://usajobs.gov" target="_blank" rel="noopener">USAJOBS.GOV</a></div>
+      <div class="entry-note">ALL FEDERAL JOBS — SEARCH 'PHILADELPHIA' FOR NPS, AMTRAK-ADJACENT, AND OTHER FED ROLES</div>
+    </div>
+    <div class="entry-url">USAJOBS.GOV</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://thesca.org" target="_blank" rel="noopener">STUDENT CONSERVATION ASSOCIATION</a></div>
+      <div class="entry-note">PLACES PAID CREW LEADERS AT INDEPENDENCE HALL AND OTHER HISTORIC SITES</div>
+    </div>
+    <div class="entry-url">THESCA.ORG</div>
+  </div>
+  <div class="entry">
+    <div class="entry-left">
+      <div class="entry-name"><a href="https://phila.gov/jobs" target="_blank" rel="noopener">PHILADELPHIA HISTORICAL COMMISSION</a></div>
+      <div class="entry-note">SEARCH 'HISTORIC PRESERVATION PLANNER' THROUGH THE MAIN CITY JOBS PORTAL</div>
+    </div>
+    <div class="entry-url">PHILA.GOV/JOBS</div>
+  </div>
+</div>
+
+<div class="tips">
+  <div class="tips-title">TIPS</div>
+  <p>SET UP JOB ALERTS ON LINKEDIN AND INDEED WITH THESE SEARCH TERMS:</p>
+  <div class="search-terms">
+    <span>OPERATIONS MANAGER</span>
+    <span>PARTNERSHIPS MANAGER</span>
+    <span>PROGRAM MANAGER</span>
+    <span>DIRECTOR OF OPERATIONS</span>
+    <span>DIRECTOR OF STRATEGIC ENGAGEMENT</span>
+    <span>MANAGER OF STRATEGIC INITIATIVES</span>
+  </div>
+  <p style="margin-top:16px;">FOR MUSEUMS, HISTORIC SITES, AND NONPROFITS — CHECK THE GREATER PHILADELPHIA CULTURAL ALLIANCE JOB BANK AND MUSEUM COUNCIL WEEKLY. THEY AGGREGATE MANY ORGS THAT DON'T POST ELSEWHERE.</p>
+</div>
+
+</body>
+</html>
